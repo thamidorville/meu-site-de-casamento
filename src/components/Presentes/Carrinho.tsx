@@ -36,7 +36,7 @@ const Carrinho: React.FC<CarrinhoProps> = ({
   onRemoveItem,
   onAdicionarMaisItens,
 }) => {
-  // const [preferenceId, setPreferenceId] = useState<string | null>(null);
+ 
   const [loading, setLoading] = useState(false);
 
   initMercadoPago("APP_USR-be09c6d0-c857-47de-8137-da7dec4001c8");
@@ -72,8 +72,6 @@ const Carrinho: React.FC<CarrinhoProps> = ({
 
       const data = await response.json();
       if (data.id) {
-
-        // setPreferenceId(data.id);
         window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=${data.id}`;
       } else {
         console.error("Erro ao criar a preferência de pagamento.");
@@ -91,7 +89,6 @@ const Carrinho: React.FC<CarrinhoProps> = ({
       <DrawerContent>
         <DrawerCloseButton />
         <DrawerHeader>Meu Carrinho</DrawerHeader>
-
         <DrawerBody>
           {carrinho.length > 0 ? (
             <VStack spacing={4} align="stretch">
@@ -124,12 +121,12 @@ const Carrinho: React.FC<CarrinhoProps> = ({
                   Adicionar mais itens
                 </Button>
                 <Button
-                  colorScheme="pink"
+                  colorScheme='purple'
                   onClick={handleCreatePreference}
                   isLoading={loading}
                   width={["100%", "auto"]}
                 >
-                  Continuar compra
+                  Finalizar Compra
                 </Button>
               </Box>
             </VStack>

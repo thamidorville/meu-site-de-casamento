@@ -1,10 +1,8 @@
 "use client";
 
-// theme.ts
 import { extendTheme } from "@chakra-ui/react";
 import { Gabriela } from "next/font/google";
 
-// Definir a fonte Gabriela
 const gabriela = Gabriela({
   weight: ["400"],
   subsets: ["latin"],
@@ -12,8 +10,8 @@ const gabriela = Gabriela({
 
 const theme = extendTheme({
   fonts: {
-    heading: gabriela.style.fontFamily, // Use para headers
-    body: gabriela.style.fontFamily,    // Use para o corpo do texto
+    heading: gabriela.style.fontFamily, 
+    body: gabriela.style.fontFamily,    
   },
   styles: {
     global: {
@@ -34,7 +32,7 @@ const theme = extendTheme({
         bgRepeat: "no-repeat",
         bgPosition: "center",
         backgroundAttachment: "fixed",
-        fontFamily: gabriela.style.fontFamily, // Aplicar fonte no body
+        fontFamily: gabriela.style.fontFamily, 
       },
       "#__next": {
         marginLeft: "auto",
@@ -45,7 +43,7 @@ const theme = extendTheme({
       },
       p: {
         marginBottom: "1rem",
-        fontFamily: gabriela.style.fontFamily, // Fonte aplicada para parágrafos
+        fontFamily: gabriela.style.fontFamily, 
       },
       footer: {
         maxW: "100%",

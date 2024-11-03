@@ -56,7 +56,7 @@ export default function Home() {
 
       <Box textAlign="center" mt={2}>
         <Text
-          fontSize="4xl"
+          fontSize={["3xl", "4xl", "5xl"]}
           fontWeight="bold"
           mb={6}
           fontFamily={fontTittle.style.fontFamily}
@@ -64,90 +64,44 @@ export default function Home() {
         >
           Contagem Regressiva
         </Text>
-        <HStack spacing={8} justify="center">
-          <VStack>
-            <Box
-              bgGradient="linear(to-b, #c29edb, #9f79d1)"
-              color="white"
-              borderRadius="2xl"
-              boxShadow="0px 4px 15px rgba(0, 0, 0, 0.1)"
-              w="120px"
-              h="120px"
-              textAlign="center"
-              mt={4}
-              mb={4}
-              transition="transform 0.3s ease"
-              _hover={{ transform: "scale(1.1)" }}
-            >
-              <Text fontSize="5xl" fontWeight="bold" letterSpacing="tight">
-                {timeLeft.dias}
-              </Text>
-              <Text fontSize="sm" mt={1} letterSpacing="wide">
-                DIAS
-              </Text>
-            </Box>
-          </VStack>
-          <VStack>
-            <Box
-              bgGradient="linear(to-b, #c29edb, #9f79d1)"
-              color="white"
-              borderRadius="2xl"
-              boxShadow="0px 4px 15px rgba(0, 0, 0, 0.1)"
-              w="120px"
-              h="120px"
-              textAlign="center"
-              transition="transform 0.3s ease"
-              _hover={{ transform: "scale(1.1)" }}
-            >
-              <Text fontSize="5xl" fontWeight="bold" letterSpacing="tight">
-                {timeLeft.horas}
-              </Text>
-              <Text fontSize="sm" mt={1} letterSpacing="wide">
-                HORAS
-              </Text>
-            </Box>
-          </VStack>
-          <VStack>
-            <Box
-              bgGradient="linear(to-b, #c29edb, #9f79d1)"
-              color="white"
-              borderRadius="2xl"
-              boxShadow="0px 4px 15px rgba(0, 0, 0, 0.1)"
-              w="120px"
-              h="120px"
-              textAlign="center"
-              transition="transform 0.3s ease"
-              _hover={{ transform: "scale(1.1)" }}
-            >
-              <Text fontSize="5xl" fontWeight="bold" letterSpacing="tight">
-                {timeLeft.minutos}
-              </Text>
-              <Text fontSize="sm" mt={1} letterSpacing="wide">
-                MINUTOS
-              </Text>
-            </Box>
-          </VStack>
-          <VStack>
-            <Box
-              bgGradient="linear(to-b, #c29edb, #9f79d1)"
-              color="white"
-              borderRadius="2xl"
-              boxShadow="0px 4px 15px rgba(0, 0, 0, 0.1)"
-              w="120px"
-              h="120px"
-              textAlign="center"
-              transition="transform 0.3s ease"
-              _hover={{ transform: "scale(1.1)" }}
-            >
-              <Text fontSize="5xl" fontWeight="bold" letterSpacing="tight">
-                {timeLeft.segundos}
-              </Text>
-              <Text fontSize="sm" mt={1} letterSpacing="wide">
-                SEGUNDOS
-              </Text>
-            </Box>
-          </VStack>
-        </HStack>
+        <Flex wrap="wrap" justify="center" gap={[2, 4, 6]}>
+          {Object.entries(timeLeft).map(([timeUnit, value]) => (
+            <VStack key={timeUnit}>
+              <Box
+                bgGradient="linear(to-b, #c29edb, #9f79d1)"
+                color="white"
+                borderRadius="2xl"
+                boxShadow="0px 4px 15px rgba(0, 0, 0, 0.1)"
+                w={["60px", "80px", "100px", "120px"]} 
+                h={["60px", "80px", "100px", "120px"]}
+                textAlign="center"
+                transition="transform 0.3s ease"
+                _hover={{ transform: "scale(1.1)" }}
+              >
+                <Text
+                  fontSize={["md", "xl", "2xl", "3xl"]}
+                  fontWeight="bold"
+                  letterSpacing="tight"
+                  mt={[2, 4, 8]}
+                  mb={[2, 2, 2]}
+                >
+                  {value}
+                </Text>
+                <Text
+                  fontSize={["xx-small", "xs", "sm"]} 
+                  letterSpacing="wide"
+                  textAlign="center" 
+                  whiteSpace="normal"
+                  wordBreak="break-word"
+                  mb={[2, 4, 1]}
+            
+                >
+                  {timeUnit.toUpperCase()}
+                </Text>
+              </Box>
+            </VStack>
+          ))}
+        </Flex>
       </Box>
       <Introduction />
       <Box

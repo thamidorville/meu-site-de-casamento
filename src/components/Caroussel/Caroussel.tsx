@@ -17,23 +17,23 @@ const imagens = [
 
 const CustomSwiper = styled(Swiper)`
   .swiper-pagination-bullet {
-    background-color: #e491ecad; // Bolinhas brancas
+    background-color: #e491ecad; 
     opacity: 0.8;
   }
 
   .swiper-pagination-bullet-active {
-    background-color: #f1c40f; // Bolinha ativa em dourado
+    background-color: #f1c40f; 
   }
 
   .swiper-button-next,
   .swiper-button-prev {
-    color: #c865d3b7; // Setas brancas
+    color: #c865d3b7; 
     transition: color 0.3s;
   }
 
   .swiper-button-next:hover,
   .swiper-button-prev:hover {
-    color: #f1c40f; // Setas douradas ao passar o mouse
+    color: #f1c40f; 
   }
 `;
 
@@ -49,13 +49,13 @@ const Caroussel = () => {
       >
         <CustomSwiper
           modules={[Pagination, Navigation]}
-          pagination={{ clickable: true }} // Habilita a paginação
-          navigation={true} // Habilita a navegação (setas)
-          spaceBetween={50} // Espaço entre os slides
-          slidesPerView={1} // Quantos slides por vez
-          loop={true} // Deixa o carrossel em loop infinito
-          autoplay={{ delay: 5000 }} // Adiciona autoplay suave
-          style={{ width: "100%", height: "100%" }} // O Swiper ocupa 100% da largura e altura
+          pagination={{ clickable: true }} 
+          navigation={true} 
+          spaceBetween={50} 
+          slidesPerView={1}
+          loop={true}
+          autoplay={{ delay: 5000 }} 
+          style={{ width: "100%", height: "100%" }} 
         >
           {imagens.map((url, index) => (
             <SwiperSlide key={index}>

@@ -46,12 +46,12 @@ const cardsData = [
 const CardsPage = () => {
   return (
     <Flex
-      wrap="wrap" // Permite que os cards quebrem para a próxima linha
-      justifyContent="center" // Centraliza os cards horizontalmente
-      gap={6} // Espaçamento padrão entre os cards
+      wrap="wrap" 
+      justifyContent="center" 
+      gap={6} 
       mt={8}
-      px={["1rem", "2rem", "3rem", "4rem"]} // Padding horizontal adaptável
-      mx="auto" // Centraliza horizontalmente
+      px={["1rem", "2rem", "3rem", "4rem"]} 
+      mx="auto" 
       mb={10}
     >
       {cardsData.map((card, index) => (
@@ -61,9 +61,9 @@ const CardsPage = () => {
           href={card.href}
           _hover={{ textDecoration: "none", transform: "scale(1.05)" }} 
           transition="transform 0.2s ease"
-          maxW="300px" // Define uma largura máxima para os cards
-          flex="1 1 300px" // Flex-grow, flex-shrink e flex-basis, garante que o card ocupe 300px mas possa expandir
-          mx="auto" // Alinhamento centralizado do card
+          maxW="300px" 
+          flex="1 1 300px" 
+          mx="auto"
         >
           <Card
             className="max-w-sm"
