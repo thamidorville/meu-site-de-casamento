@@ -54,9 +54,9 @@ const PresentearModal: React.FC<PresentearModalProps> = ({
               },
             ],
             back_urls: {
-              success: "http://localhost:3000/success",
-              failure: "http://localhost:3000/failure",
-              pending: "http://localhost:3000/pending",
+              success: "https://thamirisevinicius.com.br/success",
+              failure: "https://thamirisevinicius.com.br/failure",
+              pending: "https://thamirisevinicius.com.br/pending",
             },
             auto_return: "approved",
           }),
