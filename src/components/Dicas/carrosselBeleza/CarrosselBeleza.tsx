@@ -76,54 +76,84 @@ const CarrosselBeleza = () => {
           return null;
       }
     }
-    return (      
-        <Flex justify="center" align="center" py={6}>
-          <Box maxW="800px" w="100%" overflow="hidden">
-            <CustomSwiper
-              effect="coverflow"
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={3}
-              spaceBetween={20}
-              coverflowEffect={{
-                rotate: 30,
-                stretch: 10,
-                depth: 150,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              navigation={true}
-              modules={[EffectCoverflow, Navigation]}
-             
-            >
-              {temas.map((slide) => (
-                <SwiperSlide key={slide.id} style={{ display: "flex", justifyContent: "center" }}>
-                  <Box
-                    borderRadius="md"
-                    overflow="hidden"
-                    boxShadow="lg"
-                    bg="transparent"
-                    _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
-                    maxW="250px"
-                    p={4}
-                  >
-                    <Image src={slide.img} alt={slide.title} width="100%" objectFit='cover' height='200px' />
-                    <Box p={4}>
-                      <Text fontWeight="bold" fontSize="lg">
-                        {slide.title}
-                      </Text>
-                      <Text onClick={() => handleSlideClick(slide.id)} style={{ cursor: "pointer" }} mt={2} fontSize="sm" color="gray.500" _hover={{ bg: "yellow.600", color: "purple.900" }}>
-                        Clique para maiores detalhes.
-                      </Text>
-                      
-                    </Box>
+    return (
+      <Flex justify="center" align="center" py={6}>
+        <Box maxW={{ base: "100%", md: "600px", lg: "800px" }} w="100%" overflow="hidden">
+          <CustomSwiper
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={3}
+            spaceBetween={20}
+            coverflowEffect={{
+              rotate: 30,
+              stretch: 10,
+              depth: 150,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            navigation={true}
+            modules={[EffectCoverflow, Navigation]}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+              480: {
+                slidesPerView: 1.5,
+                spaceBetween: 15,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+            }}
+          >
+            {temas.map((slide) => (
+              <SwiperSlide key={slide.id} style={{ display: "flex", justifyContent: "center" }}>
+                <Box
+                  borderRadius="md"
+                  overflow="hidden"
+                  boxShadow="lg"
+                  bg="transparent"
+                  _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
+                  maxW={{ base: "250px", sm: "150px", md: "200px", lg: "250px" }}
+                  p={4}
+                >
+                  <Image
+                    src={slide.img}
+                    alt={slide.title}
+                    width="100%"
+                    objectFit="cover"
+                    height={{ base: "150px", sm: "180px", md: "200px" }}
+                  />
+                  <Box p={4}>
+                    <Text fontWeight="bold" fontSize={{ base: "md", md: "lg" }}>
+                      {slide.title}
+                    </Text>
+                    <Text
+                      onClick={() => handleSlideClick(slide.id)}
+                      style={{ cursor: "pointer" }}
+                      mt={2}
+                      fontSize="sm"
+                      color="gray.500"
+                      _hover={{ bg: "yellow.600", color: "purple.900" }}
+                    >
+                      Clique para maiores detalhes.
+                    </Text>
                   </Box>
-                </SwiperSlide>
-              ))}
-            </CustomSwiper>
-          </Box>
-        </Flex>
-      );
+                </Box>
+              </SwiperSlide>
+            ))}
+          </CustomSwiper>
+        </Box>
+      </Flex>
+    );
+    
     };
 
   
