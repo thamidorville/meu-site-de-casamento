@@ -32,7 +32,7 @@ export default function Cerimonia() {
         justifyItems='center'
       >
         <Text>Data: 13 de Setembro de 2025</Text>
-        <Text>Horário: 15h</Text>
+        <Text>Horário: 15:30h</Text>
         <Text>
           Local: R. Vitória Régia, 475 - Quebra Frascos, Teresópolis - RJ
         </Text>
