@@ -1,11 +1,9 @@
-
-
-import { Box, Image, Text, Flex, Button } from "@chakra-ui/react";
+import { Box, Image, Text, Flex } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {  Navigation, EffectCoverflow } from "swiper/modules";
+import { Pagination, EffectCoverflow } from "swiper/modules";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import CabeloMaquiagem from "../detalhes/CabeloMaquiagem";
@@ -36,20 +34,18 @@ const temas = [
   },
 ];
 const CustomSwiper = styled(Swiper)`
- .swiper-button-next,
-  .swiper-button-prev {
-    color: #c865d3b7;
-    transition: color 0.3s;
-    width: 30px;
-    height: 30px;
-
-    
+  .swiper-pagination-bullet {
+    background-color: #c865d3b7; /* Cor dos dots */
+    opacity: 0.7;
+    width: 12px;
+    height: 12px;
   }
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    color: #f1c40f;
+  .swiper-pagination-bullet-active {
+    background-color: #f1c40f; /* Cor do dot ativo */
   }
 `;
+
+
 const CarrosselBeleza = () => {
 
     const [selectedTema, setSelectedTema] = useState<string | null>(null)
@@ -80,20 +76,20 @@ const CarrosselBeleza = () => {
       <Flex justify="center" align="center" py={6}>
         <Box maxW={{ base: "100%", md: "600px", lg: "800px" }} w="100%" overflow="hidden">
           <CustomSwiper
-            effect="coverflow"
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={3}
-            spaceBetween={20}
-            coverflowEffect={{
-              rotate: 30,
-              stretch: 10,
-              depth: 150,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            navigation={true}
-            modules={[EffectCoverflow, Navigation]}
+           effect="coverflow"
+           grabCursor={true}
+           centeredSlides={true}
+           slidesPerView={3}
+           spaceBetween={20}
+           coverflowEffect={{
+             rotate: 30,
+             stretch: 10,
+             depth: 150,
+             modifier: 1,
+             slideShadows: false,
+           }}
+           pagination={{ clickable: true }}
+            modules={[EffectCoverflow, Pagination]}
             breakpoints={{
               320: {
                 slidesPerView: 1,
@@ -121,8 +117,10 @@ const CarrosselBeleza = () => {
                   boxShadow="lg"
                   bg="transparent"
                   _hover={{ transform: "scale(1.05)", transition: "0.3s ease" }}
-                  maxW={{ base: "250px", sm: "150px", md: "200px", lg: "250px" }}
-                  p={4}
+                  maxW={{ base: "350px", sm: "150px", md: "200px", lg: "250px" }}
+                  p={2}
+                  mb={['42px', '64px', '48px']}
+               
                 >
                   <Image
                     src={slide.img}
@@ -141,7 +139,7 @@ const CarrosselBeleza = () => {
                       mt={2}
                       fontSize="sm"
                       color="gray.500"
-                      _hover={{ bg: "yellow.600", color: "purple.900" }}
+                      _hover={{ bg: "purple.100", color: "purple.900" }}
                     >
                       Clique para maiores detalhes.
                     </Text>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ChakraProvider } from "@chakra-ui/react";
+import { Box, ChakraProvider, Flex } from "@chakra-ui/react";
 import theme from "../theme";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
@@ -19,9 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ChakraProvider theme={theme}>
-          <Header/>
-          {children}
-          <Footer/>
+          <Flex direction="column" minH="100vh" >
+            <Header />
+            <Box flex="1">{children}</Box>
+            <Footer  />
+          </Flex>
         </ChakraProvider>
       </body>
     </html>

@@ -10,8 +10,8 @@ const gabriela = Gabriela({
 
 const theme = extendTheme({
   fonts: {
-    heading: gabriela.style.fontFamily, 
-    body: gabriela.style.fontFamily,    
+    heading: gabriela.style.fontFamily,
+    body: gabriela.style.fontFamily,
   },
   styles: {
     global: {
@@ -32,7 +32,7 @@ const theme = extendTheme({
         bgRepeat: "no-repeat",
         bgPosition: "center",
         backgroundAttachment: "fixed",
-        fontFamily: gabriela.style.fontFamily, 
+        fontFamily: gabriela.style.fontFamily,
       },
       "#__next": {
         marginLeft: "auto",
@@ -43,12 +43,12 @@ const theme = extendTheme({
       },
       p: {
         marginBottom: "1rem",
-        fontFamily: gabriela.style.fontFamily, 
+        fontFamily: gabriela.style.fontFamily,
       },
       footer: {
-        maxW: "100%",
-        mx: "auto",
-        px: "1rem",
+        w: "100vw",
+        mx: 0,
+        px: 0,
         bgGradient: "linear(to-r, #e6e6fa, #d8bfd8, #d699f5f4, #bdb5d5)",
         animation: "gradient 10s ease infinite",
       },
@@ -57,4 +57,3 @@ const theme = extendTheme({
 });
 
 export default theme;
-

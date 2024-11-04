@@ -27,7 +27,7 @@ const CabeloMaquiagem = ({ onBack }: { onBack: () => void }) => {
   return (
     <VStack spacing={6} align="center" maxW="600px" mx="auto">
       <Button onClick={onBack} colorScheme="purple" mb={4}>
-        Voltar ao Carrossel
+        Voltar
       </Button>
       <Box textAlign="center">
         <Image
