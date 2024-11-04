@@ -19,6 +19,13 @@ const saloes = [
     endereco: "Praça Nilo Peçanha, 19 - Loja 23A - Alto - Teresópolis, RJ",
     telefone: "(21) 2642-8313" 
   },
+  {
+    nome: "Aldinha Makeup",
+    img: "/images/aldinha-make.png",
+    endereco: "Edifício Primus Offices - Rua Dr. José Mendonça Clark, 90 - Sala 501, Várzea. Teresópolis/RJ",
+    telefone: "(21) 99783-1787 / @aldinhamakeup (instagram)" 
+  },
+
 ]
 
 

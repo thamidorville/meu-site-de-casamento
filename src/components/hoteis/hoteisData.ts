@@ -5,8 +5,9 @@ export const hoteisData = [
     telefone: "(21) 97640-6246",
     whatsapp: "+5521976406246",
     linkReserva:
-      "https://book.omnibees.com/hotelresults?q=8424&lang=pt-BR&currencyId=16&hotel_folder=&mysite=ob&CheckIn=13092025&CheckOut=14092025&ad=1&ch=0&ag=&child_age_input=&Code=",
+      "https://www.athoshotel.com.br/",
     imagem: "/images/athos.png",
+    cupom: "Casamentothamirisevinicius"
   },
   {
     nome: "Hotel Intercity Teresópolis",
@@ -61,8 +62,9 @@ export const hoteisData = [
     telefone: "(21) 2642-3620",
     whatsapp: "+5521984764236",
     linkReserva:
-      "https://book.omnibees.com/hotelresults?q=10761",
+      "https://www.pousadachamonix.com.br/",
     imagem: "/images/chamonix.png",
+    cupom: "Casamentothamirisevinicius"
   },
   {
     nome: "Pousada Recanto da Serra",
