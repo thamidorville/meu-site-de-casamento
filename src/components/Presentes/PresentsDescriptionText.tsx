@@ -32,14 +32,11 @@ export default function PresentsDescriptionText() {
         <Text fontSize="lg" lineHeight="1.5" mb={4}>
           Se quiserem nos presentear e fazer parte desse momento tão especial,
           criamos uma lista de presentes com muito carinho. Sintam-se à vontade
-          para escolher algo e deixar uma mensagem que vai aquecer ainda mais
-          nossos corações.
+          para escolher algo, mas o que vai aquecer ainda mais
+          nossos corações, é ter a presença de vocês na
+          nossa cerimônia e festa.
         </Text>
-        <Text fontSize="lg" lineHeight="1.5" mb={4}>
-          Mas o que realmente importa para nós é ter a presença de vocês na
-          nossa cerimônia e festa, comemorando nossas conquistas, depois de
-          tanto tempo acompanhando nosso esforço para crescer.
-        </Text>
+      
         <Text fontSize="lg" lineHeight="1.5" mb={4}>
           Agradecemos por todo o amor e apoio. Thamiris e Vinicius.
         </Text>
