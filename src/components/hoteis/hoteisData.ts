@@ -84,4 +84,14 @@ export const hoteisData = [
       "http://reservas.sescrio.org.br/reservaonline",
     imagem: "/images/sescalpina.png",
   },
+  {
+    nome: "Pousada Matitaterê",
+    endereco: "Rua Cândido Portinari, 837 - Golfe - Teresópolis, RJ",
+    telefone: "(21) 2741-4999",
+    whatsapp: "+552140202101",
+    linkReserva:
+      "http://reservas.sescrio.org.br/reservaonline",
+    imagem: "/images/matitatere.png",
+    cupom: "10% de Desconto Casamento."
+  },
 ];

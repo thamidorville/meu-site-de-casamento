@@ -58,8 +58,9 @@ export default function Cerimonia() {
         boxShadow="lg"
         borderRadius="md"
         overflow="hidden"
-        textAlign="center"
         mx="auto"
+        display="flex"
+        justifyContent="center"
       >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6203.7768706407005!2d-42.99621679342922!3d-22.399355797965406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x984db173b47657%3A0xd6c05fe9ca9cd2f4!2sVilla%20Inesquec%C3%ADvel!5e0!3m2!1spt-BR!2sbr!4v1730485575502!5m2!1spt-BR!2sbr"
