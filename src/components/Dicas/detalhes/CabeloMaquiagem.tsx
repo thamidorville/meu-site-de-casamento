@@ -25,6 +25,12 @@ const saloes = [
     endereco: "Edifício Primus Offices - Rua Dr. José Mendonça Clark, 90 - Sala 501, Várzea. Teresópolis/RJ",
     telefone: "(21) 99783-1787 / @aldinhamakeup (instagram)" 
   },
+  {
+    nome: "Luiza Rangel - Maquiadora",
+    img: "/images/luiza.png",
+    endereco: "Teresópolis/RJ",
+    telefone: "(21) 97519-5806 / @luizanevesrangel (instagram)" 
+  },
 
 ]
 

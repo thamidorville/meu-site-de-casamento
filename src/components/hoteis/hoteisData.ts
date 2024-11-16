@@ -92,6 +92,6 @@ export const hoteisData = [
     linkReserva:
       "http://reservas.sescrio.org.br/reservaonline",
     imagem: "/images/matitatere.png",
-    cupom: "10% de Desconto Casamento."
+    cupom: "10% de desconto ao reservar pelo WhatsApp como nosso convidado."
   },
 ];

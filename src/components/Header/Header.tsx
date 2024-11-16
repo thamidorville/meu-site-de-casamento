@@ -13,10 +13,9 @@ export default function Header() {
       top={0}
       zIndex={1000}
       fontSize='6x1'
-      
+   
     >
-      <Flex maxW="1200px" mx="auto" justify="center" gap={["25px","35px", "50px"]} align="center" flexWrap='wrap' backgroundColor="linear(to-r, #e6e6fa, #d8bfd8, #d699f5f4, #bdb5d5)"
-      animation="gradient 10s ease infinite">
+      <Flex maxW="1200px" mx="auto" justify="center" gap={["25px","35px", "50px"]} align="center" flexWrap='wrap'>
         <Link
           as={NextLink}
           href="/"
